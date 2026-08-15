@@ -3,6 +3,7 @@ set -euo pipefail
 
 ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 GENERATOR="$ROOT/generate-library.sh"
+DEMO_BUILDER="$ROOT/scripts/build-web-demo.sh"
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
@@ -10,6 +11,13 @@ fail(){ printf 'FAIL: %s\n' "$*" >&2; exit 1; }
 
 command -v node >/dev/null 2>&1 || fail "node is required to run the test assertions"
 bash -n "$GENERATOR"
+bash -n "$DEMO_BUILDER"
+
+DEMO_HTML="$TMP/demo/index.html"
+"$DEMO_BUILDER" "$DEMO_HTML" >/dev/null
+[ -f "$DEMO_HTML" ] || fail "web demo output is missing"
+! grep -Fq '__GAME_DATA_PLACEHOLDER__' "$DEMO_HTML" || fail "web demo still contains the game-data placeholder"
+grep -Fq 'Pocket Orchard (Demo).gba' "$DEMO_HTML" || fail "web demo does not contain the sample library"
 
 ROMS="$TMP/roms"
 mkdir -p \

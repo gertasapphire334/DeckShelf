@@ -14,6 +14,12 @@
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-2323C8"></a>
 </p>
 
+<p align="center">
+  <a href="https://xenakil.github.io/DeckShelf/"><strong>Use the web version</strong></a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><strong>Download the desktop app</strong></a>
+</p>
+
 Deck Shelf scans the ROM folders you already manage and turns them into a searchable offline library. It does not include an emulator, download games, launch games, or upload your library.
 
 The same interface ships in two forms:
@@ -33,7 +39,7 @@ Download the archive for your system from the [latest release](https://github.co
 | macOS Apple Silicon | WKWebView | `macos-arm64` |
 | macOS Intel | WKWebView | `macos-x64` |
 | Linux x64 | WebKitGTK 4.1 | `linux-x64` |
-| Any modern browser | Browser engine | Generate `Deck Shelf.html` |
+| Any modern browser | Browser engine | [Use the hosted web version](https://xenakil.github.io/DeckShelf/) or generate `Deck Shelf.html` |
 
 Keep the native executable beside `library.json`. Windows preferences and webview data remain portable in `deck-shelf-settings.json` and `deck-shelf-cache` beside the executable. Linux requires the system WebKitGTK 4.1 package. Published binaries are unsigned and releases include SHA-256 checksums.
 
@@ -62,7 +68,9 @@ If the Windows WebView2 runtime cannot initialize, Deck Shelf writes a self-cont
 
 ### Browser-only mode
 
-Run the generator without `--json-only`:
+The [hosted web version](https://xenakil.github.io/DeckShelf/) opens with a fictional sample library so it is immediately usable. Drop your own `library.json` onto the page to browse it locally; the file stays in your browser.
+
+For a fully offline copy, run the generator without `--json-only`:
 
 ```bash
 ./generate-library.sh

@@ -19,6 +19,7 @@ concurrency:
 
 jobs:
   prepare:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.created && !github.event.forced) }}
     name: Validate release tag
     runs-on: ubuntu-24.04
     outputs:
