@@ -1,8 +1,8 @@
 # Personal library data and portable runtime state
 /library.json
-/deck-shelf-settings.json
-/deck-shelf-cache/
-# Ignore state written by releases before the Deck Shelf rename.
+/deckshelf-settings.json
+/deckshelf-cache/
+# Ignore state written by releases before the DeckShelf rename.
 /shelf-settings.json
 /shelf-cache/
 
@@ -10,10 +10,10 @@
 /*.desktop
 /*.command
 /Launch *.bat
-/open-deck-shelf.sh
-/Deck Shelf.html
-/Deck Shelf (browser fallback).html
-/deck-shelf-error.log
+/open-deckshelf.sh
+/DeckShelf.html
+/DeckShelf (browser fallback).html
+/deckshelf-error.log
 
 # Native build outputs
 /dist/

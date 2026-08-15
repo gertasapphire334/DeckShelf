@@ -301,7 +301,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "deck-shelf"
+name = "deckshelf"
 version = "2.0.0"
 dependencies = [
  "gtk",

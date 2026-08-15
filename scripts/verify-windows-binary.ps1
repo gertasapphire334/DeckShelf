@@ -1,5 +1,5 @@
 param(
-    [string]$Binary = "target/release/deck-shelf.exe"
+    [string]$Binary = "target/release/deckshelf.exe"
 )
 
 $ErrorActionPreference = "Stop"

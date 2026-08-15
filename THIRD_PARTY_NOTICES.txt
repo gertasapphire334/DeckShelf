@@ -1,4 +1,4 @@
-Deck Shelf third-party notices
+DeckShelf third-party notices
 ==============================
 
 The native application is built from Rust crates recorded exactly in Cargo.lock.
@@ -12,7 +12,7 @@ The principal UI and windowing libraries are:
 
 Cargo.lock is the authoritative inventory of direct and transitive source
 dependencies for a release. Each crate's source distribution contains its
-copyright and license terms. Deck Shelf does not bundle an Electron, Node.js,
+copyright and license terms. DeckShelf does not bundle an Electron, Node.js,
 WebView2, WKWebView, WebKitGTK, or Visual C++ runtime. Windows and macOS use the
 webview supplied by the operating system. Linux uses the system WebKitGTK 4.1
 library.

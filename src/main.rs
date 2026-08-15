@@ -112,7 +112,7 @@ fn run_native(state: AppState) -> Result<(), Box<dyn Error>> {
 }
 
 fn window_icon() -> Option<Icon> {
-    let image = image::load_from_memory(include_bytes!("../assets/deck-shelf.png")).ok()?;
+    let image = image::load_from_memory(include_bytes!("../assets/deckshelf.png")).ok()?;
     let rgba = image.into_rgba8();
     let (width, height) = rgba.dimensions();
     Icon::from_rgba(rgba.into_raw(), width, height).ok()

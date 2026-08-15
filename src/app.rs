@@ -9,16 +9,16 @@ use std::{
     sync::{Arc, Mutex},
 };
 
-pub const APP_NAME: &str = "Deck Shelf";
+pub const APP_NAME: &str = "DeckShelf";
 pub const CONTENT_SECURITY_POLICY: &str = "default-src 'none'; img-src data: blob:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'";
 
 const TEMPLATE_HTML: &str = include_str!("../library-template.html");
 const GAME_DATA_TOKEN: &str = "const GAME_DATA = null; /*__GAME_DATA_PLACEHOLDER__*/";
-const SETTINGS_NAME: &str = "deck-shelf-settings.json";
+const SETTINGS_NAME: &str = "deckshelf-settings.json";
 const LEGACY_SETTINGS_NAME: &str = "shelf-settings.json";
-const CACHE_NAME: &str = "deck-shelf-cache";
+const CACHE_NAME: &str = "deckshelf-cache";
 const DEFAULT_LIBRARY_NAME: &str = "library.json";
-const FALLBACK_NAME: &str = "Deck Shelf (browser fallback).html";
+const FALLBACK_NAME: &str = "DeckShelf (browser fallback).html";
 const MAX_SETTING_BYTES: usize = 6 * 1024 * 1024;
 
 #[derive(Clone)]
@@ -144,13 +144,13 @@ impl AppState {
 
     pub fn write_error_log(&self, native_error: &str, fallback_error: Option<&str>) {
         let mut message =
-            format!("Deck Shelf could not start its native webview:\n{native_error}\n");
+            format!("DeckShelf could not start its native webview:\n{native_error}\n");
         if let Some(error) = fallback_error {
             message.push_str("\nThe browser fallback also failed:\n");
             message.push_str(error);
             message.push('\n');
         }
-        let _ = fs::write(self.application_dir.join("deck-shelf-error.log"), message);
+        let _ = fs::write(self.application_dir.join("deckshelf-error.log"), message);
     }
 }
 
@@ -218,7 +218,7 @@ mod tests {
             .expect("system clock is before the Unix epoch")
             .as_nanos();
         let directory = std::env::temp_dir().join(format!(
-            "deck-shelf-settings-test-{}-{nonce}",
+            "deckshelf-settings-test-{}-{nonce}",
             std::process::id()
         ));
         fs::create_dir(&directory).expect("create test directory");

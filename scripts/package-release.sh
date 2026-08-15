@@ -9,19 +9,19 @@ OUT="${4:-$ROOT/dist}"
 
 case "$PLATFORM" in
   windows)
-    SOURCE="$ROOT/target/release/deck-shelf.exe"
-    APP_FILE="Deck Shelf.exe"
-    STANDALONE="Deck-Shelf-$VERSION-windows-$ARCH.exe"
+    SOURCE="$ROOT/target/release/deckshelf.exe"
+    APP_FILE="DeckShelf.exe"
+    STANDALONE="DeckShelf-$VERSION-windows-$ARCH.exe"
     ;;
   macos)
-    SOURCE="$ROOT/target/release/deck-shelf"
-    APP_FILE="Deck Shelf"
-    STANDALONE="Deck-Shelf-$VERSION-macos-$ARCH"
+    SOURCE="$ROOT/target/release/deckshelf"
+    APP_FILE="DeckShelf"
+    STANDALONE="DeckShelf-$VERSION-macos-$ARCH"
     ;;
   linux)
-    SOURCE="$ROOT/target/release/deck-shelf"
-    APP_FILE="deck-shelf"
-    STANDALONE="Deck-Shelf-$VERSION-linux-$ARCH"
+    SOURCE="$ROOT/target/release/deckshelf"
+    APP_FILE="deckshelf"
+    STANDALONE="DeckShelf-$VERSION-linux-$ARCH"
     ;;
   *)
     printf 'Unsupported platform: %s\n' "$PLATFORM" >&2
@@ -33,8 +33,8 @@ esac
 
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT
-BUNDLE="$STAGE/Deck Shelf $VERSION"
-ARCHIVE="Deck-Shelf-$VERSION-$PLATFORM-$ARCH.zip"
+BUNDLE="$STAGE/DeckShelf $VERSION"
+ARCHIVE="DeckShelf-$VERSION-$PLATFORM-$ARCH.zip"
 
 mkdir -p "$OUT" "$BUNDLE/assets"
 cp "$SOURCE" "$BUNDLE/$APP_FILE"
@@ -42,7 +42,7 @@ cp "$SOURCE" "$OUT/$STANDALONE"
 cp "$ROOT/generate-library.sh" "$ROOT/library-template.html" "$BUNDLE/"
 cp "$ROOT/README.md" "$ROOT/LICENSE" "$ROOT/THIRD_PARTY_NOTICES.txt" "$BUNDLE/"
 cp "$ROOT/examples/library.sample.json" "$BUNDLE/library.sample.json"
-cp "$ROOT/assets/icon.svg" "$ROOT/assets/deck-shelf.png" "$ROOT/assets/deck-shelf.ico" "$BUNDLE/assets/"
+cp "$ROOT/assets/icon.svg" "$ROOT/assets/deckshelf.png" "$ROOT/assets/deckshelf.ico" "$BUNDLE/assets/"
 
 if [ "$PLATFORM" != "windows" ]; then
   chmod +x "$BUNDLE/$APP_FILE" "$OUT/$STANDALONE"
