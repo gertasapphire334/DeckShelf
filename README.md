@@ -1,7 +1,7 @@
-# Deck Shelf
+# DeckShelf
 
 <p align="center">
-  <img src="assets/icon.svg" width="112" height="112" alt="Deck Shelf cartridge icon">
+  <img src="assets/deckshelf-preview.png" alt="DeckShelf showing a searchable sample game library" width="100%">
 </p>
 
 <p align="center">
@@ -9,130 +9,136 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xEnakil/DeckShelf/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/xEnakil/DeckShelf/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/xEnakil/DeckShelf"></a>
-  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-2323C8"></a>
+  <a href="https://github.com/xEnakil/DeckShelf/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/xEnakil/DeckShelf/ci.yml?branch=main&style=for-the-badge&label=CI&logo=githubactions&logoColor=white"></a>
+  <a href="https://github.com/xEnakil/DeckShelf/actions/workflows/pages.yml"><img alt="Web deployment status" src="https://img.shields.io/github/actions/workflow/status/xEnakil/DeckShelf/pages.yml?branch=main&style=for-the-badge&label=web%20deploy&logo=githubactions&logoColor=white"></a>
+  <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/xEnakil/DeckShelf?style=for-the-badge&label=release&color=2323C8"></a>
+  <img alt="Platforms" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Web-14151A?style=for-the-badge">
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-D22630?style=for-the-badge"></a>
 </p>
 
-<p align="center">
-  <a href="https://xenakil.github.io/DeckShelf/"><strong>Use the web version</strong></a>
-  &nbsp;&middot;&nbsp;
-  <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><strong>Download the desktop app</strong></a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <sub><strong>Use DeckShelf</strong></sub><br>
+      <a href="https://xenakil.github.io/DeckShelf/"><img alt="Open the web version" src="https://img.shields.io/badge/Open-Web%20Version-2323C8?style=for-the-badge&logo=firefoxbrowser&logoColor=white"></a>
+      <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><img alt="Download the desktop app" src="https://img.shields.io/badge/Download-Desktop%20App-0F6FC4?style=for-the-badge&logo=github&logoColor=white"></a>
+      <a href="https://github.com/xEnakil/DeckShelf/issues"><img alt="Report an issue" src="https://img.shields.io/badge/Report-an%20Issue-D22630?style=for-the-badge&logo=github&logoColor=white"></a>
+    </td>
+    <td align="center">
+      <sub><strong>Support</strong></sub><br>
+      <a href="https://ko-fi.com/xenakil"><img alt="Support on Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white"></a>
+      <a href="https://www.paypal.com/paypalme/ElminMughalov"><img alt="Support with PayPal" src="https://img.shields.io/badge/PayPal-Support-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
+    </td>
+  </tr>
+</table>
 
-Deck Shelf scans the ROM folders you already manage and turns them into a searchable offline library. It does not include an emulator, download games, launch games, or upload your library.
+DeckShelf scans the ROM folders you already manage and turns them into a searchable offline library. It does not include an emulator, download games, launch games, or upload your library.
 
-The same interface ships in two forms:
+The same interface ships as a small Rust desktop application and a self-contained HTML file. There is no Electron runtime, account, server, telemetry, installer, or cloud dependency.
 
-- a small Rust desktop application using the webview already provided by the operating system;
-- a self-contained HTML file that opens in any modern browser.
+## Highlights
 
-No Electron. No Node.js runtime. No account, server, telemetry, or installer.
+- Fast title search with punctuation-insensitive matching, terms in any order, and typo suggestions.
+- Filters such as `sys:snes`, `region:japan`, `ext:chd`, and `fav:`.
+- System, region, storage, duplicate, favourite, and recent-search views.
+- A wanted-list checker, text export, storage breakdowns, and duplicate-title collapsing.
+- EmuDeck and RetroDECK-aware scanning with safety filters for metadata, saves, artwork, and disc tracks.
+- A portable desktop shell whose settings and cache remain beside the executable.
+- One shared interface across Windows, macOS, Linux, Steam Deck, and the web.
 
 ## Download
 
-Download the archive for your system from the [latest release](https://github.com/xEnakil/DeckShelf/releases/latest):
+Open the [latest release](https://github.com/xEnakil/DeckShelf/releases/latest) and choose your platform:
 
-| Platform | Native engine | Release |
+| Platform | Native engine | Release files |
 |---|---|---|
-| Windows 10/11 x64 | WebView2 | `windows-x64` |
-| macOS Apple Silicon | WKWebView | `macos-arm64` |
-| macOS Intel | WKWebView | `macos-x64` |
-| Linux x64 | WebKitGTK 4.1 | `linux-x64` |
-| Any modern browser | Browser engine | [Use the hosted web version](https://xenakil.github.io/DeckShelf/) or generate `Deck Shelf.html` |
+| Windows 10/11 x64 | WebView2 | `DeckShelf-1.0.0-windows-x64.exe` or `.zip` |
+| macOS Apple Silicon | WKWebView | `DeckShelf-1.0.0-macos-arm64` or `.zip` |
+| macOS Intel | WKWebView | `DeckShelf-1.0.0-macos-x64` or `.zip` |
+| Linux x64 | WebKitGTK 4.1 | `DeckShelf-1.0.0-linux-x64` or `.zip` |
+| Any modern browser | Browser engine | [Open the hosted web version](https://xenakil.github.io/DeckShelf/) |
 
-Keep the native executable beside `library.json`. Windows preferences and webview data remain portable in `deck-shelf-settings.json` and `deck-shelf-cache` beside the executable. Linux requires the system WebKitGTK 4.1 package. Published binaries are unsigned and releases include SHA-256 checksums.
+Published desktop builds are currently unsigned. Every release includes SHA-256 checksums and GitHub build-provenance attestations.
 
-## Quick start
+## Quick Start
 
 ### 1. Build the library index
 
-In Steam Deck Desktop Mode, keep `generate-library.sh`, `library-template.html`, and `assets` together. Then run:
+In Steam Deck Desktop Mode, keep `generate-library.sh`, `library-template.html`, and `assets` together, then run:
 
 ```bash
 chmod +x generate-library.sh
 ./generate-library.sh --json-only
 ```
 
-The scanner detects common EmuDeck and RetroDECK locations. An explicit path also works:
+The scanner detects common EmuDeck and RetroDECK locations. You can also provide a path:
 
 ```bash
 ./generate-library.sh --roms /run/media/deck/SDCARD/Emulation/roms --json-only
 ```
 
-### 2. Open Deck Shelf
+### 2. Open DeckShelf
 
-Copy the resulting `library.json` beside the native application and launch it. A JSON path can also be passed as the first command-line argument. Replace `library.json` and refresh the window after rescanning.
+Place the generated `library.json` beside the desktop app and launch it. You can also pass a JSON path as the first command-line argument. Replace `library.json` and refresh after rescanning.
 
-If the Windows WebView2 runtime cannot initialize, Deck Shelf writes a self-contained browser fallback beside the executable and opens it instead of crashing.
+Windows preferences and WebView data stay portable in `deckshelf-settings.json` and `deckshelf-cache` beside the executable. Linux requires the system WebKitGTK 4.1 package.
 
 ### Browser-only mode
 
-The [hosted web version](https://xenakil.github.io/DeckShelf/) opens with a fictional sample library so it is immediately usable. Drop your own `library.json` onto the page to browse it locally; the file stays in your browser.
+The [hosted web version](https://xenakil.github.io/DeckShelf/) opens with a fictional sample library. Drop your own `library.json` onto the page to browse it locally; the file is never uploaded.
 
-For a fully offline copy, run the generator without `--json-only`:
+For a fully offline copy, run:
 
 ```bash
 ./generate-library.sh
 ```
 
-This writes `Deck Shelf.html` plus small launchers for Linux, Windows, and macOS. The generated page embeds the library, works offline, and stores preferences in browser `localStorage`.
+This writes `DeckShelf.html` plus small launchers for Linux, Windows, and macOS. The generated page embeds the library and works without a server.
 
-## Scanner options
+## Scanner Options
 
 ```text
 -r, --roms DIR       folder to scan
--o, --out FILE       output HTML path (default: Deck Shelf.html)
+-o, --out FILE       output HTML path (default: DeckShelf.html)
 -t, --template FILE  template to use
 -s, --systems FILE   scan only systems listed in a file, one per line
--n, --name NAME      app and output name (default: Deck Shelf)
+-n, --name NAME      app and output name (default: DeckShelf)
 -x, --exclude NAME   ignore a file or folder name; repeat as needed
     --no-launchers   create HTML without platform launchers
     --json-only      write library.json without HTML
     --all            keep files the normal safety filters skip
 ```
 
-The scanner removes common false positives before they reach the UI:
-
-- EmuDeck and RetroDECK bookkeeping, metadata, artwork, manuals, videos, saves, states, caches, and logs;
-- empty files, patches, configuration files, and desktop shortcuts;
-- duplicate disc tracks when a matching `.cue`, `.gdi`, `.m3u`, or `.ccd` exists;
-- systems with no remaining games.
-
 Folder-based systems such as PS3, Wii U, DOS, ports, and ScummVM are counted one top-level folder at a time. Use repeated `--exclude` flags for setup-specific clutter or `--all` to keep every entry.
 
-## Search and library tools
+## Privacy and Safety
 
-- Punctuation-insensitive, case-insensitive title search.
-- Terms in any order and filters such as `sys:snes`, `region:japan`, `ext:chd`, and `fav:`.
-- Typo suggestions, favourites, recent searches, theme persistence, and keyboard shortcuts.
-- A list checker for comparing wanted titles against the shelf.
-- Text export, storage breakdowns, system filters, and duplicate-title collapsing.
+- Scanning and search run locally.
+- The web version has no backend and does not transmit your library.
+- No game files are copied, moved, renamed, deleted, downloaded, or launched.
+- Personal libraries, preferences, caches, generated pages, and binaries are ignored by Git.
+- The checked-in sample library is fictional.
 
-## Native design
+## Native Design
 
-The desktop shell is written in Rust with [Wry](https://github.com/tauri-apps/wry) and [Tao](https://github.com/tauri-apps/tao). It embeds `library-template.html` at compile time and adds only four native responsibilities:
+The desktop shell uses [Wry](https://github.com/tauri-apps/wry) and [Tao](https://github.com/tauri-apps/tao). It embeds `library-template.html` and adds only four native responsibilities:
 
-1. own the window, taskbar entry, and icon;
-2. load and validate `library.json`;
-3. persist an allowlisted set of preferences beside the executable;
-4. host the page through a private custom protocol with a restrictive content-security policy.
+1. Own the window, taskbar entry, and icon.
+2. Load and validate `library.json`.
+3. Persist an allowlisted set of preferences beside the executable.
+4. Host the page through a private custom protocol with a restrictive content-security policy.
 
-Rust release builds use optimization level 3, thin LTO, one code-generation unit, stripped symbols, and abort-on-panic. The Windows target statically links its C runtime; dependency verification rejects Visual C++ redistributable imports. The current optimized Windows build is about 1.2 MB and imports Windows system libraries only.
+Release builds use optimization level 3, thin LTO, one code-generation unit, stripped symbols, and abort-on-panic. The Windows target statically links its C runtime and is checked for Visual C++ redistributable imports.
 
-Most search and rendering work still happens in the shared JavaScript interface, so Rust is not presented as a magic speed switch. Its value here is a small, memory-safe native layer, strong release builds, and one implementation across Windows, macOS, and Linux.
+## Development
 
-## Build and test
-
-Install Rust 1.97.1 or let `rustup` use the checked-in toolchain file.
-
-Windows needs Visual Studio Build Tools with the Desktop development with C++ workload. macOS needs Xcode Command Line Tools. Debian and Ubuntu need WebKitGTK headers:
+Install Rust 1.97.1 or let `rustup` use the checked-in toolchain. Windows needs Visual Studio Build Tools, macOS needs Xcode Command Line Tools, and Debian/Ubuntu need WebKitGTK headers:
 
 ```bash
 sudo apt install libwebkit2gtk-4.1-dev
 ```
 
-Then run:
+Run the validation suite:
 
 ```bash
 cargo fmt --all -- --check
@@ -142,24 +148,44 @@ cargo build --locked --release
 ./tests/test-generator.sh
 ```
 
-GitHub Actions repeats those checks on Windows x64, Linux x64, macOS Apple Silicon, and macOS Intel. Tags build all four release archives and publish a single checksum manifest.
+## Releases and Versioning
 
-## Repository
+DeckShelf follows [Semantic Versioning](https://semver.org/) and Conventional Commits. Release Please keeps the changelog and Cargo version synchronized through an automatically maintained release pull request:
+
+- `fix:` produces a patch release, such as `1.0.1`.
+- `feat:` produces a minor release, such as `1.1.0`.
+- `feat!:` or a `BREAKING CHANGE:` footer produces a major release, such as `2.0.0`.
+- `docs:`, `test:`, `ci:`, `build:`, and `chore:` improve the project without forcing a release.
+
+When the release pull request is merged, GitHub builds Windows, Linux, macOS Apple Silicon, and macOS Intel artifacts, publishes checksums, and records provenance. See [CHANGELOG.md](CHANGELOG.md) for release notes.
+
+## Project Structure
 
 ```text
 src/                       Rust native shell and portable storage
-assets/                    shared application icons
-scripts/                   release packaging and Windows dependency checks
+assets/                    application icons and README preview
+scripts/                   web, release, and Windows verification helpers
 tests/                     scanner regression tests
 generate-library.sh        Steam Deck and Linux scanner
-library-template.html      the single shared interface
+library-template.html      shared desktop and browser interface
 examples/library.sample.json
 ```
 
-Personal libraries, settings, caches, generated pages, and binaries are ignored by Git. The sample library is intentionally fictional.
+## Support the Project
 
-`@xEnakil` is the sole maintainer and project decision-maker. Anyone can use the public [issue tracker](https://github.com/xEnakil/DeckShelf/issues) for reproducible bugs or focused feature requests. Security problems should use the repository's [private advisory form](https://github.com/xEnakil/DeckShelf/security/advisories/new).
+If DeckShelf saves you time, support is appreciated but never expected.
+
+<p>
+  <a href="https://ko-fi.com/xenakil"><img alt="Support on Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white"></a>
+  <a href="https://www.paypal.com/paypalme/ElminMughalov"><img alt="Support with PayPal" src="https://img.shields.io/badge/PayPal-Support-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
+</p>
+
+## Issues and Feedback
+
+Use the public [issue tracker](https://github.com/xEnakil/DeckShelf/issues) for reproducible bugs and focused feature requests. Report security problems through GitHub's [private advisory form](https://github.com/xEnakil/DeckShelf/security/advisories/new).
+
+`@xEnakil` is the sole maintainer and project decision-maker.
 
 ## License
 
-Deck Shelf is available under the [MIT License](LICENSE). Third-party dependency information is recorded in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) and `Cargo.lock`.
+DeckShelf is available under the [MIT License](LICENSE). Third-party dependency information is recorded in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) and `Cargo.lock`.
